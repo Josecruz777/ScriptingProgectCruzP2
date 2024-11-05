@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BehavioerComponentScript : MonoBehaviour
 {
+    private object material;
+
+    public int Getcomponent { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +19,12 @@ public class BehavioerComponentScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GetComponent<Render>().Material.color = Color.red;
+            NewMethod();
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Getcomponent <() .material.color = Color.green;
+            
+              
         }
             if (Input.GetKeyDown(KeyCode.B))
             {
@@ -27,4 +32,9 @@ public class BehavioerComponentScript : MonoBehaviour
             }
 
         }
+
+    private void NewMethod()
+    {
+        GetComponent<Render>().Material  = Color.red;
     }
+}
